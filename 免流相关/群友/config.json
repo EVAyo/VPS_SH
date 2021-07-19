@@ -1,0 +1,114 @@
+{
+    "stats": {},
+    "api": {
+        "services": [
+            "StatsService"
+        ],
+        "tag": "api"
+    },
+    "routing": {
+        "strategy": "rules",
+        "settings": {
+            "rules": [
+                {
+                    "inboundTag": [
+                        "api"
+                    ],
+                    "type": "field",
+                    "outboundTag": "api"
+                }
+            ]
+        }
+    },
+    "inbounds": [
+        {
+            "streamSettings": {
+                "wsSettings": {
+                    "path": "/"
+                },
+                "network": "ws",
+                "kcpSettings": {
+                    "uplinkCapacity": 5,
+                    "downlinkCapacity": 20,
+                    "readBufferSize": 1,
+                    "mtu": 1350,
+                    "header": {
+                        "type": "none"
+                    },
+                    "tti": 20,
+                    "congestion": false,
+                    "writeBufferSize": 1
+                },
+                "tcpSettings": {
+                    "header": {
+                        "type": "none",
+                        "response": {
+                            "status": "200",
+                            "headers": {
+                                "Transfer-Encoding": [
+                                    "chunked"
+                                ],
+                                "Connection": [
+                                    "keep-alive"
+                                ],
+                                "Content-Type": [
+                                    "application/octet-stream",
+                                    "application/x-msdownload",
+                                    "text/html",
+                                    "application/x-shockwave-flash"
+                                ],
+                                "Pragma": "no-cache"
+                            },
+                            "reason": "OK",
+                            "version": "1.1"
+                        }
+                    }
+                }
+            },
+            "protocol": "vmess",
+            "port": "80",
+            "settings": {
+                "clients": [
+                    {
+                        "alterId": 64,
+                        "level": 0,
+                        "email": "4",
+                        "id": "732ada90-3ad1-45bd-bd37-fb5fe1b9007c"
+                    }
+                ]
+            }
+        },
+        {
+            "tag": "api",
+            "settings": {
+                "address": "127.0.0.1"
+            },
+            "protocol": "dokodemo-door",
+            "port": 5001,
+            "listen": "127.0.0.1"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "0": {
+                "statsUserUplink": true,
+                "statsUserDownlink": true
+            }
+        },
+        "system": {
+            "statsInboundDownlink": true,
+            "statsInboundUplink": true
+        }
+    },
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "tag": "blocked",
+            "protocol": "blackhole",
+            "settings": {}
+        }
+    ]
+}

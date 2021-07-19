@@ -1,0 +1,24 @@
+更改服务器系统时间
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+安装v2ray服务端
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+
+卸载v2ray服务端
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
+
+v2ray服务器的配置文件
+/usr/local/etc/v2ray/config.json
+
+设置为开机自动启动
+systemctl enable v2ray
+
+重启v2ray服务
+systemctl restart v2ray
+
+启动v2ray服务
+systemctl start v2ray
+
+停止v2ray服务
+systemctl stop v2ray
