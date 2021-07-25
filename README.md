@@ -57,3 +57,15 @@
 #### 探针
 + cokemine-status：https://github.com/cokemine/ServerStatus-Hotaru
 > 云探针+**分支(前端＋后端)**
+
+
+
+## 免流相关
+
+### 群友
+
++ v2fly：https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+
+## 未知1
+
++ 待补充
