@@ -74,7 +74,44 @@
 
 
 
-## 未知1
+# 其他
 
-+ 待补充
+## 探针
+
+> 介绍：https://hostloc.com/thread-679270-1-1.html
+>
+> Prometheus+Grafana：https://lala.im/6764.html
+
+### 项目
+
+> https://github.com/cokemine/ServerStatus-Hotaru
+>
+> https://github.com/cppla/ServerStatus
+>
+> https://github.com/Aranxu/NodePanels
+>
+> https://github.com/nkeonkeo/nekonekostatus
+>
+> https://github.com/likexian/stathub-go
+>
+> https://github.com/reruin/ServerWatch
+
+### 网站
+
+> https://hetrixtools.com/
+>
+> https://netdata.cloud/
+>
+> https://learn.netdata.cloud/
+>
+> https://eheh.org/
+>
+> https://nodequery.com/
+>
+> https://www.monitis.com/
+>
+> Ganglia
+> NodeQuery
+> Pinguzo
+> NIXStats
 
